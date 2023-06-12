@@ -1,0 +1,52 @@
+{%  extends 'layout.html' %}
+
+<h1>home</h1>
+
+{% block content %}
+
+{% load static %}
+<header class="row bg-black">  
+   <div class= "col-md-4">
+    <img src="{%static 'pdf/foto.jpeg'%}" class="img-fluid">
+
+   </div>
+   <div class="col-md-8 my-auto">
+    <h1>Soy <strong>Fede</strong></h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas, est hic porro culpa officiis repudiandae sed. Odit illo ratione quos sunt necessitatibus natus iusto, vel asperiores accusamus ipsa nobis eaque, commodi earum praesentium temporibus molestias vero illum magnam, cumque libero exercitationem harum error. Doloribus minima vel hic omnis assumenda molestiae dolor nesciunt cumque, ullam suscipit, aliquid, iure facilis enim dolore architecto laboriosam dolores accusamus quos voluptates corporis perferendis? Est molestias id vitae aut harum minima numquam odio explicabo officia fugit? Repudiandae labore cupiditate velit minima reiciendis odit illum tempora? Blanditiis dolorum quia cum libero velit provident perspiciatis! Illum, quam fuga.</p>
+    <a href="{%static 'pdf/FedeBianciotto.pdf'%}" class="btn btn-primary btn-lg rounded-0 my-3" target="_blank"> Descargar CV</a>
+
+   </div>
+
+</header>
+
+<div class="row my-4 text-center">
+    <h3> Mis Proyectos</h3>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero eius non enim quos facilis veniam. Repellat vel sapiente natus eligendi minus numquam accusantium blanditiis illo. Magni debitis ab quisquam eligendi quia deleniti neque sed aspernatur totam minima in, tempora dolorem dignissimos voluptatum et iste rem commodi amet. Accusantium sapiente, aliquid maxime impedit reiciendis nostrum sint aspernatur asperiores! Unde suscipit nostrum nesciunt, facere alias facilis ipsa ducimus amet culpa tempore? Mollitia, voluptatibus unde alias aliquam illo quibusdam nisi consequatur ab cupiditate ut aut quam velit quia commodi perferendis sed obcaecati voluptate exercitationem, consequuntur ipsam accusamus? Laudantium soluta veritatis, dolore quo, saepe placeat eveniet similique aperiam nihil qui dolorum tenetur dolores ea doloribus repellendus velit. Numquam consequuntur ex odio deleniti ipsum! Velit, cumque optio. Dolor aut maiores dignissimos delectus ex magni minus maxime nemo ratione, praesentium corrupti porro reiciendis nostrum totam obcaecati dolorum similique? Doloremque inventore repellendus rem maxime eveniet eum et incidunt doloribus ducimus magnam id reiciendis illo deleniti error praesentium sapiente animi voluptate, ex iste non corrupti dolores? Nisi iste officiis dolorem distinctio a, enim magni possimus dolores fugit est. Qui illo iste, voluptates ea totam voluptas, suscipit quis animi exercitationem, deserunt saepe. Nihil architecto, odio est natus consectetur ab.</p>
+
+    {%for project in projects%}
+
+    <div class="col-md-4 p-4">  
+        <div class="card bg-black card-project">
+            <img src=" {{project.imagen.url}}" class="card-img-top">
+        <div class="card-body">
+
+    <h2>{{project.titulo}}</h2>
+    <p>{{project.descripcion}}</p>
+   
+
+    {%if project.url %}
+    <a href="{{project.url}}" class="btn btn-dark rounded-0 btn-sm" target="_blank">Sito Oficial</a>
+    {%endif%}
+
+</div>  
+</div>
+</div>
+    {% endfor %}
+    
+    {%endblock%}
+    
+
+</div>
+
+
+
