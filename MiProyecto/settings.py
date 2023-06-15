@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'MiProyecto.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.postgresql',
         'HOST': "db.tvximfcqlfeoeibficps.supabase.co",
         'NAME': "postgres",
         'USER': "postgres ",
